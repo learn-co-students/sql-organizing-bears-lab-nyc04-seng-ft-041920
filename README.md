@@ -44,6 +44,7 @@ before do
   @sql_runner.execute_create_file
 end
 ```
+
 Before each test two important things happen.
 
 First, a new in-memory database is created. Why do we do this? Let's say we run our tests and they add ten items to our database. If we did not use an in-memory store, those would be in there forever. This way our database gets thrown out after every running of the tests. You can learn more about in-memory databases [here](https://www.sqlite.org/inmemorydb.html).
@@ -62,15 +63,15 @@ CREATE TABLE bears (
 
 Your columns should be the following types:
 
-|column | type  |
-|-------|-------|
-|id     |integer| <-- Make sure this is the table's primary key
-|name   |text   |
-|age    |integer|
-|gender |text   | <-- Should be a single, capitalized letter: 'M' or 'F'
-|color  |text   |
-|temperament | text|
-|alive  |boolean|
+| column      | type    |
+| ----------- | ------- |
+| id          | integer | <-- Make sure this is the table's primary key |
+| name        | text    |
+| age         | integer |
+| gender      | text    | <-- Should be a single, capitalized letter: 'M' or 'F' |
+| color       | text    |
+| temperament | text    |
+| alive       | boolean |
 
 Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determine what your insert values are going to be. Be sure to pay attention to how booleans are expressed in SQLite3.
 
@@ -78,14 +79,14 @@ Read about [SQLite3 Datatypes](https://www.sqlite.org/datatype3.html) to determi
 
 Get the tests in `spec/insert_spec.rb` to pass. Input the following 8 bears (you can make up details about them, but make gender either 'M' or 'F'):
 
-* Mr. Chocolate
-* Rowdy
-* Tabitha
-* Sergeant Brown
-* Melissa
-* Grinch
-* Wendy
-* unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
+- Mr. Chocolate
+- Rowdy
+- Tabitha
+- Sergeant Brown
+- Melissa
+- Grinch
+- Wendy
+- unnamed (the bear that killed Tim didn't have a name; refer back to how to create a record that doesn't have one value)
 
 ## Part 3: `SELECT`
 
